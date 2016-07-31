@@ -12,6 +12,6 @@ export default ListPageContainer = createContainer(({ params: { id } }) => {
     loading,
     list,
     listExists,
-    todos: listExists ? list.todos().fetch() : [],
+    // todos: listExists ? list.todos().fetch() : [],
   };
 }, ListPage);

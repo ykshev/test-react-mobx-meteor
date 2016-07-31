@@ -1,10 +1,13 @@
 import React from 'react';
+import {observer} from 'mobx-react';
+
 import ListHeader from '../components/ListHeader.jsx';
 import TodoItem from '../components/TodoItem.jsx';
 import NotFoundPage from '../pages/NotFoundPage.jsx';
 import Message from '../components/Message.jsx';
+import state from '/imports/ui/store/todoStore.js';
 
-export default class ListPage extends React.Component {
+@observer export default class ListPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +23,7 @@ export default class ListPage extends React.Component {
   }
 
   render() {
-    const { list, listExists, loading, todos } = this.props;
+    const { list, listExists, loading, todos } = state;
     const { editingTodo } = this.state;
 
     if (!listExists) {

@@ -2822,6 +2822,16 @@
         }
       }
     },
+    "mobx": {
+      "version": "2.4.1",
+      "from": "mobx@latest",
+      "resolved": "https://registry.npmjs.org/mobx/-/mobx-2.4.1.tgz"
+    },
+    "mobx-react": {
+      "version": "3.5.1",
+      "from": "mobx-react@latest",
+      "resolved": "https://registry.npmjs.org/mobx-react/-/mobx-react-3.5.1.tgz"
+    },
     "react": {
       "version": "15.1.0",
       "from": "https://registry.npmjs.org/react/-/react-15.1.0.tgz",

@@ -2,6 +2,7 @@ import React from 'react';
 import { _ } from 'meteor/underscore';
 import classnames from 'classnames';
 import { displayError } from '../helpers/errors.js';
+import {observer} from 'mobx-react';
 
 import {
   setCheckedStatus,
@@ -9,7 +10,7 @@ import {
   remove,
 } from '../../api/todos/methods.js';
 
-export default class TodoItem extends React.Component {
+@observer export default class TodoItem extends React.Component {
   constructor(props) {
     super(props);
     this.throttledUpdate = _.throttle(value => {
@@ -58,7 +59,7 @@ export default class TodoItem extends React.Component {
       checked: todo.checked,
       editing,
     });
-
+    console.log('todo', todo._id);
     return (
       <div className={todoClass}>
         <label className="checkbox">
